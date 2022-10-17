@@ -21,9 +21,23 @@
 </head>
 <body>
     <div id="root">
-        <div class="container">
-
-        </div>
+        <header>
+          <img class="logo" src="assets/logo.svg" alt="spotify logo">  
+        </header>
+        <main>
+            <div class="container">
+                <div class="song-card" v-for="song in songs">
+                    <img class="song-poster" :src="song.poster" alt="">
+                    <h3>{{ song.title }}</h3>
+                    <div>
+                        <p class="info">{{ song.author }}</p>
+                        <p class="info">{{ song.year }}</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>
+
+
